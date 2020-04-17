@@ -76,7 +76,7 @@
 
 ?>
 <!DOCTYPE html>
-<html lang="en" class="ui-toolkit">
+<html lang="pt-br" class="ui-toolkit">
 <head>
   <title><?= $site_name; ?> - <?= $lang["titles"]["dashboard"]; ?></title>
   <meta charset="utf-8">
@@ -123,8 +123,8 @@
           <div class="col-lg-9 col-sm-12 text-lg-left text-center <?=($lang_dir == "right" ? 'order-1 order-sm-2':'')?>">
             <div class="row mb-2">
               <div class="col-6 col-lg-4 mt-3">
-                <h6><i class="fa fa-globe pr-1"></i> Country</h6>
-                <h6><i class="fa fa-star pr-1"></i> Positive Ratings</h6>
+                <h6><i class="fa fa-globe pr-1"></i> País</h6>
+                <h6><i class="fa fa-star pr-1"></i> Avaliações positivas</h6>
               </div>
               <div class="col-6 col-lg-8 mt-3">
                 <h6 class="text-muted"><?= $login_seller_country; ?></h6>
@@ -133,8 +133,8 @@
             </div>
             <div class="row">
               <div class="col-6 col-sm-4">
-                <h6><i class="fa fa-truck pr-1"></i> Recent Delivery</h6>
-                <h6><i class="fa fa-clock-o pr-1"></i> Member Since</h6>
+                <h6><i class="fa fa-truck pr-1"></i> Entrega recente</h6>
+                <h6><i class="fa fa-clock-o pr-1"></i> Membro desde</h6>
               </div>
               <div class="col-6 col-lg-8">
                 <h6 class="text-muted"><?= $login_seller_recent_delivery; ?></h6>
@@ -144,7 +144,7 @@
             <?php if(empty($payout_anyday)){ ?>
             <div class="row mt-2">
               <div class="col-6 col-sm-4">
-                <h6><i class="fa fa-money pr-1"></i> Payout Date</h6>
+                <h6><i class="fa fa-money pr-1"></i> Data do pagamento</h6>
               </div>
               <div class="col-6 col-lg-8">
                 <h6 class="text-muted"><?= $p_date; ?></h6>
@@ -160,19 +160,19 @@
               $count_orders = $db->count("orders",array("seller_id" => $login_seller_id, "order_status" => 'completed'));
               ?>
               <img width="" src="images/comp/completed.png" alt="completed">
-            <h5 class="text-muted pt-2">Orders Completed</h5>
+            <h5 class="text-muted pt-2">Pedidos concluídos</h5>
             <h3 class="text-success"><?= $count_orders; ?></h3>
           </div>
           <div class="col-md-4 text-center border-box">
             <?php $count_orders = $db->count("orders",array("seller_id"=>$login_seller_id,"order_status"=>'delivered')); ?>
             <img width="" src="images/comp/box.png" alt="box">
-            <h5 class="text-muted pt-2">Delivered Orders</h5>
+            <h5 class="text-muted pt-2">Pedidos entregues</h5>
             <h3 class="text-success"><?= $count_orders; ?></h3>
           </div>
           <div class="col-md-4 text-center border-box">
             <?php $count_orders = $db->count("orders",array("seller_id"=>$login_seller_id,"order_status"=>'cancelled'));?>
             <img width="" src="images/comp/cancellation.png" alt="cancellation">
-            <h5 class="text-muted pt-2">Orders Cancelled</h5>
+            <h5 class="text-muted pt-2">Pedidos cancelados</h5>
             <h3 class="text-success"><?= $count_orders; ?></h3>
           </div>
         </div>
@@ -183,23 +183,23 @@
               $count_orders = $db->count("orders",array("seller_id" => $login_seller_id, "order_active" => 'yes'));
             ?>
             <img width="" src="images/comp/debt.png" alt="debt">
-            <h5 class="text-muted pt-2"> Sales In Queue</h5>
+            <h5 class="text-muted pt-2"> Vendas na fila</h5>
             <h3 class="text-success"><?= $count_orders; ?></h3>
           </div>
           <div class="col-md-3 text-center border-box">
             <?php $count_orders = $db->count("orders",array("buyer_id" => $login_seller_id, "order_active" => 'yes')); ?>
               <img width="" src="images/comp/shopping-bags.png" alt="shopping-bags">
-            <h5 class="text-muted pt-2"> Open Purchases</h5>
+            <h5 class="text-muted pt-2"> Compras em aberto</h5>
             <h3 class="text-success"><?= $count_orders; ?> </h3>
           </div>
           <div class="col-md-3 text-center border-box">
               <img width="" src="images/comp/accounting.png" alt="accounting">
-            <h5 class="text-muted pt-2"> Balance</h5>
+            <h5 class="text-muted pt-2"> Saldo</h5>
             <h3 class="text-success"><?= $s_currency; ?><?= $current_balance; ?></h3>
           </div>
           <div class="col-md-3 text-center border-box">
               <img width="" src="images/comp/financial.png" alt="financial">
-            <h5 class="text-muted pt-2"> Earnings(Month)</h5>
+            <h5 class="text-muted pt-2"> Ganhos (Mês)</h5>
             <h3 class="text-success"><?= $s_currency; ?><?= $month_earnings; ?></h3>
           </div>
         </div>

@@ -4,16 +4,18 @@
   if(!isset($_SESSION['seller_user_name'])){
   echo "<script>window.open('login','_self')</script>";
   }
-  ?>
-<h5 class="mb-4"> PayPal For Withdrawing Revenue  </h5>
+?>
+
+<!-- PAYPAL -->
+<h5 class="mb-4"> PayPal para retirada de receita  </h5>
 <form method="post" class="clearfix mb-3">
   <div class="form-group row">
-    <label class="col-md-4 col-form-label"> Enter Paypal Email </label>
+    <label class="col-md-4 col-form-label"> Digite o email do Paypal </label>
     <div class="col-md-8">
-      <input type="text" name="seller_paypal_email" value="<?php echo $login_seller_paypal_email; ?>" placeholder="Enter paypal email" class="form-control" required >
+      <input type="text" name="seller_paypal_email" value="<?php echo $login_seller_paypal_email; ?>" placeholder="Digite o email do Paypal" class="form-control" required >
     </div>
   </div>
-  <button type="submit" name="submit_paypal_email" class="btn btn-success <?= $floatRight ?>">Change Paypal Email</button>
+  <button type="submit" name="submit_paypal_email" class="btn btn-success <?= $floatRight ?>">Alterar e-mail do Paypal</button>
 </form>
 <?php 
   if(isset($_POST['submit_paypal_email'])){
@@ -41,15 +43,18 @@
   }
   ?>
 <hr>
-<h5 class="mb-4"> Payoneer For Withdrawing Revenue  </h5>
+<!-- PAYPAL -->
+
+<!-- -->
+<h5 class="mb-4"> Payoneer para retirada de receita  </h5>
 <form method="post" class="clearfix mb-3">
   <div class="form-group row">
-    <label class="col-md-4 col-form-label"> Enter Payoneer Email </label>
+    <label class="col-md-4 col-form-label"> Digite o email do Payoneer </label>
     <div class="col-md-8">
-      <input type="text" name="seller_payoneer_email" value="<?php echo $login_seller_payoneer_email; ?>" placeholder="Enter payoneer email" class="form-control" required >
+      <input type="text" name="seller_payoneer_email" value="<?php echo $login_seller_payoneer_email; ?>" placeholder="Digite o email do Payoneer" class="form-control" required >
     </div>
   </div>
-  <button type="submit" name="submit_payoneer_email"class="btn btn-success <?= $floatRight ?>">Change Payoneer Email</button>
+  <button type="submit" name="submit_payoneer_email"class="btn btn-success <?= $floatRight ?>">Alterar email do Payoneer</button>
 </form>
 <?php 
   if(isset($_POST['submit_payoneer_email'])){
@@ -77,21 +82,24 @@
   }
   ?>
 <hr>
-<h5 class="mb-4"> Mobile Money For Withdrawing Revenue  </h5>
+<!-- -->
+
+<!-- -->
+<h5 class="mb-4"> Mobile Money para retirada de receita </h5>
 <form method="post" class="clearfix mb-3">
   <div class="form-group row">
-    <label class="col-md-4 col-form-label"> Account Number </label>
+    <label class="col-md-4 col-form-label"> Número da conta </label>
     <div class="col-md-8">
-      <input type="text" name="m_account_number" value="<?php echo $login_seller_account_number; ?>" placeholder="Enter Account Number" class="form-control" required>
+      <input type="text" name="m_account_number" value="<?php echo $login_seller_account_number; ?>" placeholder="Número da conta" class="form-control" required>
     </div>
   </div>
   <div class="form-group row">
-    <label class="col-md-4 col-form-label"> Account/Owner Name </label>
+    <label class="col-md-4 col-form-label"> Nome da conta / proprietário </label>
     <div class="col-md-8">
-      <input type="text" name="m_account_name" value="<?php echo $login_seller_account_name; ?>" placeholder="Enter Account/Owner Name" class="form-control" required>
+      <input type="text" name="m_account_name" value="<?php echo $login_seller_account_name; ?>" placeholder="Nome da conta / proprietário" class="form-control" required>
     </div>
   </div>
-  <button type="submit" name="update_mobile_money" class="btn btn-success <?= $floatRight ?>">Update Mobile Money</button>
+  <button type="submit" name="update_mobile_money" class="btn btn-success <?= $floatRight ?>">Atualizar Mobile Money</button>
 </form>
 <?php 
   if(isset($_POST['update_mobile_money'])){
@@ -115,16 +123,19 @@
   }
   ?>
 <hr>
-<h5 class="mb-4"> Bitcoin Wallet For Withdrawing Revenue </h5>
+<!-- -->
+
+<!-- -->
+<h5 class="mb-4"> Carteira Bitcoin Para Retirar Receita </h5>
 <form method="post" class="clearfix mb-3">
   <div class="form-group row">
-    <label class="col-md-4 col-form-label"> Wallet Address </label>
+    <label class="col-md-4 col-form-label"> Endereço da carteira </label>
     <div class="col-md-8">
-      <input type="text" name="seller_wallet" value="<?php echo $login_seller_wallet; ?>" placeholder="Enter Wallet Address" class="form-control"/>
-      <small class="text-danger">! Warning You Only Need To Enter Your Bitcoin Wallet Address Not Any Other.</small>
+      <input type="text" name="seller_wallet" value="<?php echo $login_seller_wallet; ?>" placeholder="Endereço da carteira" class="form-control"/>
+      <small class="text-danger">! Aviso: você só precisa digitar seu endereço da carteira Bitcoin e não outro.</small>
     </div>
   </div>
-  <button type="submit" name="submit_wallet" class="btn btn-success <?= $floatRight ?>">Update Wallet Address</button>
+  <button type="submit" name="submit_wallet" class="btn btn-success <?= $floatRight ?>">Atualizar endereço da carteira</button>
 </form>
 <?php
   if(isset($_POST['submit_wallet'])){
@@ -147,7 +158,10 @@
   }
   ?>
 <hr>
-<h5 class="mb-4"> REAL-TIME NOTIFICATIONS </h5>
+<!-- -->
+
+<!-- -->
+<h5 class="mb-4"> NOTIFICAÇÕES EM TEMPO REAL </h5>
 <form method="post" class="clearfix">
   <div class="form-group row mb-3">
     <label class="col-md-4 col-form-label"> Enable/disable sound </label>
@@ -186,7 +200,10 @@
   }
   ?>
 <hr>
-<h5 class="mb-4"> Change Password </h5>
+<!-- -->
+
+<!-- -->
+<h5 class="mb-4"> Mudar senha</h5>
 <?php 
   $form_errors = Flash::render("change_pass_errors");
   $form_data = Flash::render("form_data");
@@ -204,24 +221,24 @@
 <?php } ?>
 <form method="post" class="clearfix mb-3">
   <div class="form-group row">
-    <label class="col-md-4 col-form-label"> Enter Old Password </label>
+    <label class="col-md-4 col-form-label"> Digite a senha antiga </label>
     <div class="col-md-8">
       <input type="text" name="old_pass" class="form-control" required="">
     </div>
   </div>
   <div class="form-group row">
-    <label class="col-md-4 col-form-label"> Enter New Password </label>
+    <label class="col-md-4 col-form-label"> Digite a senha nova </label>
     <div class="col-md-8">
       <input type="text" name="new_pass" class="form-control" required="">
     </div>
   </div>
   <div class="form-group row">
-    <label class="col-md-4 col-form-label"> Confirm New Password </label>
+    <label class="col-md-4 col-form-label"> Confirmar nova senha </label>
     <div class="col-md-8">
       <input type="text" name="new_pass_again" class="form-control" required="">
     </div>
   </div>
-  <button type="submit" name="change_password" class="btn btn-success <?= $floatRight ?>">Change Password</button>
+  <button type="submit" name="change_password" class="btn btn-success <?= $floatRight ?>">Salvar senha</button>
 </form>
 <?php 
   if(isset($_POST['change_password'])){
@@ -277,15 +294,18 @@
   }
   ?>
 <hr>
-<h5 class="mb-1"> ACCOUNT DEACTIVATION </h5>
+<!-- -->
+
+<!-- -->
+<h5 class="mb-1"> DESATIVAÇÃO DE CONTA </h5>
 <ul class="list-unstyled <?= $floatRight ?>">
   <li class="lead mb-2">
-    <strong> What happens when you deactivate your account? </strong>
+    <strong> O que acontece quando você desativa sua conta?</strong>
   </li>
-  <li><i class="fa fa-hand-o-right"></i> Your profile and services won't be shown on <?php echo $site_name; ?> anymore. </li>
-  <li><i class="fa fa-hand-o-right"></i> Any open orders will be canceled and refunded. </li>
-  <li><i class="fa fa-hand-o-right"></i> You won't be able to re-activate your proposals/services. </li>
-  <li><i class="fa fa-hand-o-right"></i> You won't be able to restore your account. </li>
+  <li><i class="fa fa-hand-o-right"></i> Seu perfil e serviços não serão exibidos em <?php echo $site_name; ?> não mais. </li>
+  <li><i class="fa fa-hand-o-right"></i> Qualquer pedidos em aberto serão cancelados e reembolsados. </li>
+  <li><i class="fa fa-hand-o-right"></i> Você não poderá reativar suas propostas / serviços. </li>
+  <li><i class="fa fa-hand-o-right"></i> Você não poderá restaurar sua conta. </li>
 </ul>
 <div class="clearfix"></div>
 <form method="post">
@@ -294,30 +314,30 @@
     ?>
   <div class="form-group">
     <!-- form-group Starts -->
-    <h5 class="pt-3 pb-3"> Please withdraw your revenues before deactivating your account. </h5>
+    <h5 class="pt-3 pb-3"> Retire suas receitas antes de desativar sua conta. </h5>
   </div>
   <!-- form-group Ends -->
   <button type="submit" name="deactivate_account" disabled class="btn btn-danger <?= $floatRight ?>">
-  <i class="fa fa-frown-o"></i> Deactivate Account
+  <i class="fa fa-frown-o"></i> Desativar conta
   </button>
   <?php }elseif($current_balance == 0){ ?>
   <div class="form-group">
-    <label> Why Are You Leaving? </label>
+    <label> Por que você está indo?</label>
     <select name="deactivate_reason" class="form-control" required>
-      <option class="hidden"> Choose A Reason </option>
-      <option> The quality of service was less than expected </option>
-      <option>I just don't have the time</option>
-      <option>I can’t find what I am looking for</option>
-      <option>I had a bad experience with a seller / buyer</option>
-      <option>I found the site difficult to use</option>
-      <option>The level of customer service was less than expected</option>
-      <option>I have another <?php echo $site_name; ?> account</option>
-      <option>I'm not receiving enough orders</option>
-      <option>Other</option>
+      <option class="hidden"> Escolha uma razão </option>
+      <option> A qualidade do serviço foi inferior ao esperado </option>
+      <option>Eu simplesmente não tenho tempo</option>
+      <option>Não consigo encontrar o que estou procurando</option>
+      <option>Tive uma má experiência com um vendedor / comprador</option>
+      <option>Achei o site difícil de usar</option>
+      <option>O nível de serviço ao cliente foi inferior ao esperado</option>
+      <option>eu tenho outro <?php echo $site_name; ?> account</option>
+      <option>Não estou recebendo pedidos suficientes</option>
+      <option>De outros</option>
     </select>
   </div>
   <button type="submit" name="deactivate_account" class="btn btn-danger <?= $floatRight ?>">
-  <i class="fa fa-frown-o"></i> Deactivate Account
+  <i class="fa fa-frown-o"></i> Desativar conta
   </button>
   <?php } ?>   
 </form>
@@ -360,4 +380,5 @@
     </script>";
   }
   }
-  ?>
+?>
+<!-- -->

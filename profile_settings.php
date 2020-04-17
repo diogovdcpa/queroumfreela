@@ -21,7 +21,7 @@
 <?php } ?>
 <form method="post" enctype="multipart/form-data" runat="server" autocomplete="off">
   <div class="form-group row">
-    <label class="col-md-3 col-form-label"> Full Name </label>
+    <label class="col-md-3 col-form-label"> Nome completo </label>
     <div class="col-md-8">
       <input type="text" name="seller_name" value="<?php echo $login_seller_name; ?>" class="form-control" >
     </div>
@@ -33,17 +33,17 @@
     </div>
   </div>
   <div class="form-group row">
-    <label class="col-md-3 col-form-label"> Country </label>
+    <label class="col-md-3 col-form-label"> País </label>
     <div class="col-md-8">
       <input type="text" name="seller_country" id="countries" value="<?php echo $login_seller_country; ?>" class="form-control" >
     </div>
   </div>
   <div class="form-group row">
-    <label class="col-md-3 col-form-label"> Main Conversational Language </label>
+    <label class="col-md-3 col-form-label"> Idioma principal de conversação </label>
     <div class="col-md-8">
       <select name="seller_language" class="form-control" >
         <?php if($login_seller_language == 0){ ?>
-        <option class="hidden"> Select Language </option>
+        <option class="hidden"> Selecione o idioma </option>
         <?php 
           $get_languages = $db->select("seller_languages");
           while($row_languages = $get_languages->fetch()){
@@ -66,13 +66,13 @@
     </div>
   </div>
   <div class="form-group row">
-    <label class="col-md-3 col-form-label"> Profile Photo </label>
+    <label class="col-md-3 col-form-label"> Foto de perfil </label>
     <div class="col-md-8">
       <input type="file" name="profile_photo" class="form-control">
       <input type="hidden" name="profile_photo">
       <p class="mt-2">
-        This photo is your identity on <?php echo $site_name; ?>.<br>
-        It appears on your profile, messages and proposals/services pages.
+        Esta foto é sua identidade em <?php echo $site_name; ?>.<br>
+        Ele aparece no seu perfil, mensagens e propostas / páginas de serviços.
       </p>
       <?php if(!empty($login_seller_image)){ ?>
       <img src="user_images/<?php echo $login_seller_image; ?>" width="80" class="img-thumbnail img-circle" >
@@ -82,13 +82,13 @@
     </div>
   </div>
   <div class="form-group row">
-    <label class="col-md-3 col-form-label"> Cover Photo </label>
+    <label class="col-md-3 col-form-label"> Foto de capa </label>
     <div class="col-md-8">
       <input type="file" name="cover_photo" id="cover" class="form-control">
       <p class="mt-2">
-        This is your cover photo on your 
+        Esta é sua foto de capa no seu
         <a target="_blank" class="text-success" href="<?php echo $site_url ?>/<?php echo $_SESSION['seller_user_name']; ?>"> 
-        Profile Page
+        Página de perfil
         </a>
       </p>
       <?php if(!empty($login_seller_cover_image)){ ?>
@@ -99,7 +99,7 @@
     </div>
   </div>
   <div class="form-group row">
-    <label class="col-md-3 col-form-label"> Headline </label>
+    <label class="col-md-3 col-form-label"> Título </label>
     <div class="col-md-8">
       <textarea name="seller_headline" id="textarea-headline" rows="2" class="form-control" maxlength="150"><?php echo $login_seller_headline; ?></textarea>
       <span class="float-right mt-1">
@@ -108,7 +108,7 @@
     </div>
   </div>
   <div class="form-group row">
-    <label class="col-md-3 col-form-label"> Description</label>
+    <label class="col-md-3 col-form-label"> Descrição </label>
     <div class="col-md-8">
       <textarea name="seller_about" id="textarea-about" rows="5" class="form-control" maxlength="300" placeholder="Tell us something about yourself..."><?php echo $login_seller_about; ?></textarea>
       <span class="float-right mt-1">
@@ -117,8 +117,8 @@
     </div>
   </div>
   <hr>
-  <button type="submit" name="submit" class="btn btn-success <?= $floatRight ?>" style="<?=($lang_dir == "right" ? 'margin-left: 110px;':'')?>">
-  <i class="fa fa-floppy-o"></i> Save Changes
+  <button type="submit" name="submit" class="btn btn-success <?= $floatRight ?>" style = "<?=($lang_dir == "right" ? 'margin-left: 110px;':'')?>>
+  <i class="fa fa-floppy-o"></i> Salvar alterações
   </button>
 </form>
 <script>
